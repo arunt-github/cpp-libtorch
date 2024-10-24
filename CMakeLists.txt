@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.2)
+project(torchtest)
+set(CMAKE_PREFIX_PATH /libtorch)
+find_package(Torch REQUIRED)
+set(CMAKE_CXX_FLAGS "${CMAKE_CSS_FLAGS} ${TORCH_CXX_FLAGS}")
+add_executable(${PROJECT_NAME} main.cpp)
